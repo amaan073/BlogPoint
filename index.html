@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlogPoint</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap');
@@ -54,43 +54,51 @@
 
 
 
-    <section>
+    <section class="blogs-section py-5" style="min-height: calc(100vh - 85px);">
 
-        <div class="px-4 py-4 my-5 text-center">
+        <div class="px-4 py-4 mb-5 text-center ">
             <h1 class="display-5 fw-bold text-body-emphasis">Featured Posts</h1>
         </div>
 
         <div id="blogPosts" class="blogPosts d-flex flex-common flex-wrap justify-content-center w-100 gap-5">
-            <div class="card shadow" style="width: 18rem;">
-              <img src="./images/What-is-AI.jpg" alt="understanding Ai blog" class="rounded-top">
+            <div class="card shadow" onclick="location.href='./Blogs/understanding-ai.html'">
+              <img src="./images/AI.webp" alt="understanding Ai blog" class="rounded-top">
               <div class="card-body">
                 <h5 class="card-title">Understanding A.I.</h5>
-                <p class="card-text">Explore the fundamentals of artificial intelligence, its applications, and its impact on various industries today.</p>
-                <a href="./Blogs/understanding-ai.html" class="btn btn-primary">Read More</a>
+                <p class="card-text clamp">
+                  Explore the fundamentals of artificial intelligence, its applications, and its impact on various industries today and shaping technological innovation while simultaneously redefining how humans interact with complex digital systems globally.
+                  <span class="read-more">Read more</span>
+                </p>
               </div>
             </div>
-            <div class="card shadow" style="width: 18rem;">
-              <img src="./images/Feature-Image-Web-Development-Tr.png" alt="web development trend blog" class="rounded-top">
+            <div class="card shadow" onclick="location.href='./Blogs/web-development-trends.html'">
+              <img src="./images/web_dev.webp" alt="web development trend blog" class="rounded-top">
               <div class="card-body">
                 <h5 class="card-title">Web Development Trends</h5>
-                <p class="card-text">Discover the latest trends in web development, including technologies, frameworks, and best practices shaping the industry.</p>
-                <a href="./Blogs/web-development-trends.html" class="btn btn-primary">Read More</a>
+                <p class="card-text clamp">
+                  Discover the latest trends in web development, including technologies, frameworks, and best practices shaping the industry and driving modern digital experiences while ensuring accessibility, security, and peak performance for diverse global users.                  
+                  <span class="read-more">Read more</span>
+                </p>
               </div>
             </div>
-            <div class="card shadow" style="width: 18rem;">
-              <img src="./images/healthy eating.png" alt="healthy eating blog" class="rounded-top">
+            <div class="card shadow" onclick="location.href='./Blogs/healthy-eating.html'">
+              <img src="./images/food.webp" alt="healthy eating blog" class="rounded-top">
               <div class="card-body">
                 <h5 class="card-title">Healthy Eating</h5>
-                <p class="card-text">Learn about nutritious foods, balanced diets, and tips for maintaining a healthy lifestyle through proper nutrition.</p>
-                <a href="./Blogs/healthy-eating.html" class="btn btn-primary">Read More</a>
+                <p class="card-text clamp">
+                  Learn about nutritious foods, balanced diets, and tips for maintaining a healthy lifestyle through proper nutrition and sustainable daily wellness habits to optimize physical energy, mental clarity, and long-term disease prevention.
+                  <span class="read-more">Read more</span>
+                </p>
               </div>
             </div>
-            <div class="card shadow" style="width: 18rem;">
-              <img src="./images/Asian-Cup-Final-2019-Hasan-Al-Ha.jpg" alt="football tactics blog" class="rounded-top">
+            <div class="card shadow" onclick="location.href='./Blogs/evolution-of-football-tactics.html'">
+              <img src="./images/football.webp" alt="football \tactics blog" class="rounded-top">
               <div class="card-body">
                 <h5 class="card-title">Evolution of Football Tactics</h5>
-                <p class="card-text">Examine the historical development of football strategies, key formations, and influential coaches throughout the game’s history.</p>
-                <a href="./Blogs/evolution-of-football-tactics.html" class="btn btn-primary">Read More</a>
+                <p class="card-text clamp">
+                  Examine the historical development of football strategies, key formations, and influential coaches throughout the game’s history and their lasting tactical legacy to understand how spatial manipulation and collective discipline revolutionized modern play.
+                  <span class="read-more">Read more</span>
+                </p>
             </div>
         </div>
     </section>
@@ -99,7 +107,7 @@
 
 
 
-    <div class="footer text-center text-white p-3 mt-5"  style="background-color: var(--bs-secondary-color);">
+    <div class="footer text-center text-white p-3"  style="background-color: var(--bs-secondary-color);">
       © <span id="date">2024</span> BlogPoint. All rights reserved.
     </div>
 

@@ -1,57 +1,114 @@
 body {
-    background-color: #fcfcfd !important;
+  background-color: #fcfcfd !important;
 }
 
+.card {
+  cursor: pointer;
+  width: 300px;
+}
+
+.card-title,
+.card-text {
+  word-break: break-word;
+}
+
+.card-title {
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1; /* number of lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-text.clamp {
+  position: relative;
+  display: -webkit-box;
+  line-clamp: 5;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* fade + dots illusion */
+.card-text.clamp::after {
+  content: "…";
+  position: absolute;
+  bottom: 0;
+  right: 5.2rem; /* space before Read more */
+  background: white;
+  padding-left: 4px;
+}
+
+/* Read more inline */
+.card-text .read-more {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-weight: 600;
+  color: var(--bs-primary);
+  cursor: pointer;
+  background: white;
+  padding-left: 6px;
+}
 
 .heading {
-    font-family: pacifico, cursive;
-    color: #fff;
+  font-family: pacifico, cursive;
+  color: #fff;
 }
-
 
 .active {
-    background-color: var(--bs-body-bg) !important;  
-    color: black !important;
+  background-color: var(--bs-body-bg) !important;
+  color: black !important;
 }
 
-
-main>h1, .blog-description>h1 {
-    font-size: clamp(35px, 8vw, 50px);
+main > h1,
+.blog-description > h1 {
+  font-size: clamp(35px, 8vw, 50px);
 }
 
-.image>img {
-    width: 100%;
-    max-width: 670px;
+.image > img {
+  width: 100%;
+  max-width: 670px;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+.card.shadow > img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
 }
 
 .commentForm {
-    width: 100%;
-    max-width: 450px;
+  width: 100%;
+  max-width: 450px;
 }
 
-.like>svg {
-    cursor: pointer;
+.like > svg {
+  cursor: pointer;
 }
 
-section>div>h1 {
-    animation: glow 2.5s ease-in infinite;
+section > div > h1 {
+  animation: glow 2.5s ease-in infinite;
 }
 @keyframes glow {
-    0% {
-        text-shadow: 0;
-    }
-    50% {
-        text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow, 0 0 40px orange;
-    }
-    100% {
-        text-shadow: 0;
-    }
+  0% {
+    text-shadow: 0;
+  }
+  50% {
+    text-shadow:
+      0 0 10px yellow,
+      0 0 20px yellow,
+      0 0 30px yellow,
+      0 0 40px orange;
+  }
+  100% {
+    text-shadow: 0;
+  }
 }
 
-
-
-@media (max-width:450px) {
-    .card {
-        width: 90% !important;
-    }
+@media (max-width: 450px) {
+  .card {
+    width: 90% !important;
+  }
 }
